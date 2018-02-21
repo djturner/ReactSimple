@@ -1,0 +1,65 @@
+[
+    {
+        "messageId": "DC758D36-EE6D-4A1F-97D1-432A281E8394",
+        "from": "3E2EF663-49B7-4C71-8822-D6FA3C4ED579",
+        "to": "ADC4B9ED-6B4A-41CD-9B02-DEF07251E19A",
+        "action": 1,
+        "body": "Nandos at lunch?",
+        "creationTime": "2018-02-20T10:00:00.000Z",
+        "correlationId": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+        "messageId": "8797089C-B26C-4EE8-A206-8EE5E5A6882E",
+        "from": "ADC4B9ED-6B4A-41CD-9B02-DEF07251E19A",
+        "to": "3E2EF663-49B7-4C71-8822-D6FA3C4ED579",
+        "action": 1,
+        "body": "sure. what time?",
+        "creationTime": "2018-02-20T10:04:00.000Z",
+        "correlationId": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+        "messageId": "B8AD38DB-1328-4097-81EF-E745068790B1",
+        "from": "3E2EF663-49B7-4C71-8822-D6FA3C4ED579",
+        "to": "ADC4B9ED-6B4A-41CD-9B02-DEF07251E19A",
+        "action": 1,
+        "body": "12pm?",
+        "creationTime": "2018-02-20T10:05:00.000Z",
+        "correlationId": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+        "messageId": "FEC11F06-CD47-457C-BDCB-765149683561",
+        "from": "ADC4B9ED-6B4A-41CD-9B02-DEF07251E19A",
+        "to": "3E2EF663-49B7-4C71-8822-D6FA3C4ED579",
+        "action": 1,
+        "body": "works for me 😊",
+        "creationTime": "2018-02-20T10:06:00.000Z",
+        "correlationId": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+        "messageId": "BF2D7683-7706-4739-811F-FC34BF839933",
+        "from": "1532F0EE-3B42-450A-9351-5B00D8BCA87B",
+        "to": "ADC4B9ED-6B4A-41CD-9B02-DEF07251E19A",
+        "action": 1,
+        "body": "See that ludicrous display last night?",
+        "creationTime": "2018-02-21T10:01:00.000Z",
+        "correlationId": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+        "messageId": "2A08888E-E176-4D3B-B6FE-5AD99EA40284",
+        "from": "ADC4B9ED-6B4A-41CD-9B02-DEF07251E19A",
+        "to": "1532F0EE-3B42-450A-9351-5B00D8BCA87B",
+        "action": 1,
+        "body": "What was Wenger thinking, sending Walcott on that early?",
+        "creationTime": "2018-02-21T10:02:00.000Z",
+        "correlationId": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+        "messageId": "4475341D-E12C-459B-8EF1-460A5BB4CB94",
+        "from": "1532F0EE-3B42-450A-9351-5B00D8BCA87B",
+        "to": "ADC4B9ED-6B4A-41CD-9B02-DEF07251E19A",
+        "action": 1,
+        "body": "The thing about Arsenal is, they always try and walk it in!",
+        "creationTime": "2018-02-21T10:05:00.000Z",
+        "correlationId": "00000000-0000-0000-0000-000000000000"
+    }
+]

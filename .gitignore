@@ -1,0 +1,5 @@
+node_modules/
+.vs/*
+[Bb]in
+[Dd]ebug*/
+obj/

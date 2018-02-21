@@ -1,0 +1,33 @@
+* {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.app
+{
+    margin: auto;
+    width: 50%;
+    height: 800px;
+}
+
+.column
+{
+    float: left;
+    height: 100%;
+    padding-right: 
+    10px
+}
+
+.message{
+    background-color: lightgreen;
+    margin: 2px;
+}
+
+.group {
+    background-color: lightblue;
+    margin: 2px;
+}
+
+button{
+    border: none;
+    background-color: Transparent;
+}

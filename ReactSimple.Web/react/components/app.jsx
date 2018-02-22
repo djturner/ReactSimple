@@ -6,6 +6,7 @@ import api from './../../api/api';
 
 const [allMessages] = [api.messages];
 const [groups] = [api.groups];
+const user = 'ADC4B9ED-6B4A-41CD-9B02-DEF07251E19A'; // me
 
 class App extends React.Component {
     constructor(props) {
@@ -15,8 +16,6 @@ class App extends React.Component {
     }
 
     groupSelectHandler(id) {
-        console.log('id is:,', id);
-
         let messages = [];
         if (allMessages) {
             messages = allMessages.filter(message =>
@@ -31,11 +30,11 @@ class App extends React.Component {
             <div>
                 <div className="app">
                     <Header />
-                    <div className="column">
+                    <div className="groupList column">
                         <GroupList groups={groups} groupSelectHandler={this.groupSelectHandler} />
                     </div>
-                    <div className="column">
-                        <MessageList messages={this.state.displayMessages} />
+                    <div className="messageList column">
+                        <MessageList messages={this.state.displayMessages} me={user} />
                     </div>
                 </div>
                 <span>{this.state.group}</span>

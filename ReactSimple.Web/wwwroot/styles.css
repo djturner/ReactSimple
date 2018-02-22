@@ -1,5 +1,5 @@
 * {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .app
@@ -7,6 +7,14 @@
     margin: auto;
     width: 50%;
     height: 800px;
+}
+
+.groupList{
+    width: 20%;
+}
+
+.messageList{
+    width: 70%;
 }
 
 .column
@@ -18,16 +26,34 @@
 }
 
 .message{
-    background-color: lightgreen;
+    background-color: lightsteelblue;
     margin: 2px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.messageOuter{
+    width: 100%;
+}
+
+.sender{
+    float: right;
+}
+
+.receiver{
+    float: left;
 }
 
 .group {
-    background-color: lightblue;
+    background-color: lightgreen;
     margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
 }
 
 button{
     border: none;
     background-color: Transparent;
+    font-size: medium;
 }

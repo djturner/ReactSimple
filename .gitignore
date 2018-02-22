@@ -3,3 +3,4 @@ node_modules/
 [Bb]in
 [Dd]ebug*/
 obj/
+bundle.js

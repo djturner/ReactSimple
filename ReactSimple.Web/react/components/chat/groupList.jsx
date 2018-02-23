@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Group from './group';
 
 function groupList(props) {
@@ -10,22 +11,24 @@ function groupList(props) {
                     key={group.id}
                     id={group.id}
                     name={group.name}
-                    selectHandler={props.groupSelectHandler}
                 />)) }
         </div>
     );
 }
 
-groupList.defaultProps = {
-    groupSelectHandler() {},
-};
-
 groupList.propTypes = {
+    // dispatch: PropTypes.func.isRequired,
     groups: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
     })).isRequired,
-    groupSelectHandler: PropTypes.func,
 };
 
-export default groupList;
+function mapStateToProps(state, ownProps) {
+    return {
+        ...ownProps,
+        groups: state.chat.groups,
+    };
+}
+
+export default connect(mapStateToProps)(groupList);

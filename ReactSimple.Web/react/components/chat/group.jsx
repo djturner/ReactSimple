@@ -1,22 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import * as actions from '../../../actions/chatActions';
 
 function group(props) {
     return (
         <div className="group">
-            <button onClick={e => props.selectHandler(props.id, e)}>{props.name}</button>
+            <button
+                onClick={() => props.dispatch(actions.selectGroup((props.id)))}
+            >
+                {props.name}
+            </button>
         </div>
     );
 }
 
-group.defaultProps = {
-    selectHandler() {},
-};
-
 group.propTypes = {
+    dispatch: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    selectHandler: PropTypes.func,
 };
 
-export default group;
+function mapStateToProps(state, ownProps) {
+    return {
+        ...ownProps,
+    };
+}
+
+export default connect(mapStateToProps)(group);

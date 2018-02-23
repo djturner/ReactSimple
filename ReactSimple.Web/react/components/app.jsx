@@ -1,46 +1,57 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import GroupList from './chat/groupList';
 import MessageList from './chat/messageList';
 import Header from './chat/header';
-import api from './../../api/api';
+import MessageInput from './chat/messageInput';
 
-const [allMessages] = [api.messages];
-const [groups] = [api.groups];
-const user = 'ADC4B9ED-6B4A-41CD-9B02-DEF07251E19A'; // me
-
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { group: '', displayMessages: [] };
-        this.groupSelectHandler = this.groupSelectHandler.bind(this);
-    }
-
-    groupSelectHandler(id) {
-        let messages = [];
-        if (allMessages) {
-            messages = allMessages.filter(message =>
-                message.to === id || message.from === id);
-        }
-
-        this.setState({ displayMessages: messages });
-    }
-
-    render() {
-        return (
-            <div>
-                <div className="app">
-                    <Header />
-                    <div className="groupList column">
-                        <GroupList groups={groups} groupSelectHandler={this.groupSelectHandler} />
-                    </div>
-                    <div className="messageList column">
-                        <MessageList messages={this.state.displayMessages} me={user} />
-                    </div>
+const App = props => (
+    <div className="app">
+        <Header />
+        <div className="groupList column">
+            <GroupList />
+        </div>
+        <div className="messageArea column">
+            {props.isTopDown ? (
+                <div>
+                    <MessageInput />
+                    <MessageList
+                        messages={props.displayMessages}
+                        me={props.user}
+                    />
                 </div>
-                <span>{this.state.group}</span>
-            </div>
-        );
-    }
+            ) : (
+                <div>
+                    <MessageList
+                        messages={props.displayMessages}
+                        me={props.user}
+                    />
+                    <MessageInput />
+                </div>
+            )}
+        </div>
+    </div>
+);
+
+App.propTypes = {
+    displayMessages: PropTypes.arrayOf(PropTypes.shape({
+        messageId: PropTypes.string.isRequired,
+        from: PropTypes.string,
+        to: PropTypes.string,
+        body: PropTypes.string.isRequired,
+    })).isRequired,
+    user: PropTypes.string.isRequired,
+    isTopDown: PropTypes.bool.isRequired,
+};
+
+function mapStateToProps(state, ownProps) {
+    return {
+        ...ownProps,
+        displayMessages: state.chat.displayMessages,
+        user: state.chat.user,
+        isTopDown: state.chat.isTopDown,
+    };
 }
 
-export default App;
+export default connect(mapStateToProps)(App);

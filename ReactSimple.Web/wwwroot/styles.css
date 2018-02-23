@@ -2,30 +2,32 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.app
-{
+.app {
     margin: auto;
     width: 50%;
     height: 800px;
 }
 
-.groupList{
+.groupList {
     width: 20%;
 }
 
-.messageList{
-    width: 70%;
+.messageArea {
+    width: 75%;
+    height: 100%;
 }
 
-.column
-{
+.messageList {
+    height: 100%;
+}
+
+.column {
     float: left;
     height: 100%;
-    padding-right: 
-    10px
+    padding-right: 5px;
 }
 
-.message{
+.message {
     background-color: lightsteelblue;
     margin: 2px;
     padding: 5px;
@@ -33,15 +35,15 @@
     width: 80%;
 }
 
-.messageOuter{
+.messageOuter {
     width: 100%;
 }
 
-.sender{
+.sender {
     float: right;
 }
 
-.receiver{
+.receiver {
     float: left;
 }
 
@@ -52,8 +54,36 @@
     border-radius: 5px;
 }
 
-button{
+button {
     border: none;
     background-color: Transparent;
     font-size: medium;
+}
+
+.messageInput {
+    clear: both;
+    background-color: lightcyan;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+    width: 100%;  
+}
+
+.messageBox {
+    float: right;
+}
+
+.messageBox input {
+    width: "*";   
+}
+
+.messageBox button {
+    background-color: lightskyblue;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.clear {
+    clear: both;
 }
